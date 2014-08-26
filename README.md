@@ -11,7 +11,7 @@ A text renderer for the [blackfriday](https://github.com/russross/blackfriday) m
 
 		extensions := 0
 		renderer := blackfridaytext.TextRenderer()
-		output = blackfriday.Markdown(input, renderer, extensions)
+		output := blackfriday.Markdown(input, renderer, extensions)
 
 ### Why?
 
