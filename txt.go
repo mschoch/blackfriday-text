@@ -52,7 +52,9 @@ func (options *Text) BlockCodeNormal(out *bytes.Buffer, text []byte, lang string
 	out.Write(text)
 }
 
-func (options *Text) BlockQuote(out *bytes.Buffer, text []byte) {
+func (options *Text) BlockQuote(out *bytes.Buffer, text []byte, alertType []byte) {
+	doubleSpace(out)
+	out.Write(alertType)
 	doubleSpace(out)
 	out.Write(text)
 }
