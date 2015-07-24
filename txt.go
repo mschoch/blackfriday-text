@@ -3,7 +3,7 @@ package blackfridaytext
 import (
 	"bytes"
 
-	"github.com/russross/blackfriday"
+	"github.com/JackKnifed/blackfriday"
 )
 
 type Text struct{}
@@ -52,7 +52,9 @@ func (options *Text) BlockCodeNormal(out *bytes.Buffer, text []byte, lang string
 	out.Write(text)
 }
 
-func (options *Text) BlockQuote(out *bytes.Buffer, text []byte) {
+func (options *Text) BlockQuote(out *bytes.Buffer, text, alertType []byte) {
+	doubleSpace(out)
+	out.Write(alertType)
 	doubleSpace(out)
 	out.Write(text)
 }
