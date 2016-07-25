@@ -13,6 +13,10 @@ A text renderer for the [blackfriday](https://github.com/russross/blackfriday) m
 		renderer := blackfridaytext.TextRenderer()
 		output := blackfriday.Markdown(input, renderer, extensions)
 
+### License
+
+Apache License Version 2.0
+
 ### Why?
 
 Why would you want to output markdown as text?  Isn't it already text?
